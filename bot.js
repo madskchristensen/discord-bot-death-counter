@@ -1,4 +1,3 @@
-// https://discord.com/developers/applications/885619681099133008/oauth2
 // https://buddy.works/tutorials/how-to-build-a-discord-bot-in-node-js-for-beginners
 
 // todo: hosting
