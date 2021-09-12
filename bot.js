@@ -1,6 +1,5 @@
 // https://buddy.works/tutorials/how-to-build-a-discord-bot-in-node-js-for-beginners
 
-// todo: hosting
 // todo: refactor koden.. En eller anden form for message handler
 // todo: Tage imod +n og -n døde på en person
 
