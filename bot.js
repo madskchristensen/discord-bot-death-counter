@@ -29,8 +29,6 @@ client.on('messageCreate', (msg) => {
 
             msg.reply(`Death recorded! ${person} has now died a total of ${db.deaths.stefan} times`)
 
-            msg.delete()
-
             break
 
         case '!madda':
