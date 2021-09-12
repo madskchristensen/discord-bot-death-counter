@@ -17,7 +17,7 @@ client.on('ready', () => {
 client.on('messageCreate', (msg) => {
     let dbJson = require('./db.json')
 
-    console.log(`Message: ${msg.content}`)
+    console.log(`Incoming: ${msg.content}`)
 
     let person = capitalizeFirstLetter(msg.content.slice(1))
 
