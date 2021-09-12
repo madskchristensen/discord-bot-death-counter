@@ -1,4 +1,3 @@
-// https://discord.com/developers/applications/885619681099133008/oauth2
 // https://buddy.works/tutorials/how-to-build-a-discord-bot-in-node-js-for-beginners
 
 // todo: hosting
@@ -29,6 +28,8 @@ client.on('messageCreate', (msg) => {
             saveToDb(dbJson)
 
             msg.reply(`Death recorded! ${person} has now died a total of ${db.deaths.stefan} times`)
+
+            msg.delete()
 
             break
 

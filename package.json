@@ -12,5 +12,8 @@
   "scripts": {
     "start": "node bot.js",
     "dev": "nodemon bot.js"
+  },
+  "engines": {
+    "node": "15.x"
   }
 }
