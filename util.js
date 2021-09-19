@@ -38,8 +38,12 @@ function getRandomPhrase() {
         `That's a bummer!`,
         `What's going on!`,
         `Valar Morghulis!`,
-        `Hmmm!`
+        `Hmmm!`,
     ]
+
+    const random = Math.floor(Math.random() * phrases.length)
+
+    return phrases[random]
 }
 
 function getArgs(msg) {
@@ -77,5 +81,5 @@ module.exports = {
     doesPersonExist,
     getArgs,
     isMessageInvalid,
-    getRandomPhrase
+    getRandomPhrase,
 }
