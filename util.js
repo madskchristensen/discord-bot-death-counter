@@ -25,6 +25,23 @@ function doesPersonExist(person) {
     return false
 }
 
+function getRandomPhrase() {
+    const phrases = [
+        'Gee whiz!',
+        'Holy moly!',
+        'Damn!',
+        'Sheeeet!',
+        'Wow!',
+        `I'm speechless!`,
+        'Lol!',
+        'Poor guy!',
+        `That's a bummer!`,
+        `What's going on!`,
+        `Valar Morghulis!`,
+        `Hmmm!`
+    ]
+}
+
 function getArgs(msg) {
     const args = msg.split(' ')
 
@@ -60,4 +77,5 @@ module.exports = {
     doesPersonExist,
     getArgs,
     isMessageInvalid,
+    getRandomPhrase
 }

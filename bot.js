@@ -59,7 +59,9 @@ client.on('messageCreate', (msg) => {
 
         util.saveToDb(db)
 
-        msg.reply(`${personUppercase} has now died ${db.deaths[person]} times.`)
+        msg.reply(
+            `${util.getRandomPhrase} ${personUppercase} has now died ${db.deaths[person]} times.`
+        )
     } else {
         msg.reply(`${util.capitalizeFirstLetter(personUppercase)} not found!`)
     }
