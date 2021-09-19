@@ -45,15 +45,21 @@ client.on('messageCreate', (msg) => {
 
     // if person exists in db.json
     if (util.doesPersonExist(person)) {
-        db.deaths[person] = mathjs.evaluate(
+        const deaths = mathjs.evaluate(
             `${db.deaths[person]} ${operator} ${value}`
         )
 
+        if (deaths < 0) {
+            msg.reply(`You can't die less than 0 times!`)
+
+            return
+        }
+
+        db.deaths[person] = deaths
+
         util.saveToDb(db)
 
-        msg.reply(
-            `Deaths updated! ${personUppercase} has now died ${db.deaths[person]} times.`
-        )
+        msg.reply(`${personUppercase} has now died ${db.deaths[person]} times.`)
     } else {
         msg.reply(`${util.capitalizeFirstLetter(personUppercase)} not found!`)
     }
