@@ -38,7 +38,7 @@ function getRandomPhrase() {
         `That's a bummer!`,
         `What's going on!`,
         `Valar Morghulis!`,
-        `Hmmm!`,
+        `What a noob!`,
     ]
 
     const random = Math.floor(Math.random() * phrases.length)

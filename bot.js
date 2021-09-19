@@ -5,6 +5,7 @@ const { Client, Intents, Message } = require('discord.js')
 const util = require('./util')
 const mathjs = require('mathjs')
 
+// intents define which type of events a bot will recieve
 const client = new Client({
     intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES],
 })
@@ -60,7 +61,9 @@ client.on('messageCreate', (msg) => {
         util.saveToDb(db)
 
         msg.reply(
-            `${util.getRandomPhrase()} ${personUppercase} has now died ${db.deaths[person]} times.`
+            `${util.getRandomPhrase()} ${personUppercase} has now died ${
+                db.deaths[person]
+            } times.`
         )
     } else {
         msg.reply(`${util.capitalizeFirstLetter(personUppercase)} not found!`)
